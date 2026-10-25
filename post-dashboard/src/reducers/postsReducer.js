@@ -3,7 +3,7 @@ export const initialState = {
     posts: [],
     error: null
 };
-export fuction postsReducer(state , action){
+export function postsReducer(state , action){
     switch (action.type){
         case 'FETCH_START':
             return {
@@ -17,6 +17,13 @@ export fuction postsReducer(state , action){
                 loading: false,
                 posts: action.payload,
                 error: null
+            };
+         case 'FETCH_ERROR':
+            return {
+                ...state,
+                loading: false,
+                posts: [],
+                error: action.payload
             };
     }
 }
