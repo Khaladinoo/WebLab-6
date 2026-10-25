@@ -25,5 +25,7 @@ export function postsReducer(state , action){
                 posts: [],
                 error: action.payload
             };
+            default:
+                return state;
     }
 }
