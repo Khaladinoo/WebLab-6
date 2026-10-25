@@ -1,3 +1,3 @@
-export async function fetchPosts() {
+export async function fetchPosts(){
 
 }
