@@ -11,5 +11,12 @@ export fuction postsReducer(state , action){
                 loading: true,
                 error: null
             };
+        case 'FETCH_SUCCESS':
+            return{
+                ...state,
+                loading: false,
+                posts: action.payload,
+                error: null
+            };
     }
 }
