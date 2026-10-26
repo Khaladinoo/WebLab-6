@@ -56,4 +56,12 @@ return () => {
                     No posts found matching your criteria.
                 </div>
             )}
+            {!state.loading && !state.error && filteredPosts.length > 0 && (
+                <PostList posts={filteredPosts} />
+            )}
+        </div>
+    );
 }
+
+export default App;
+
