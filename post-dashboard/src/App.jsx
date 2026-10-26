@@ -9,5 +9,8 @@ function App(){
     const [filterText, setFilterText] = useState('');
     useEffect(() => {
         let isMounted = true;
+        async function loadPosts() {
+            dispatch({ type: 'FETCH_START' });
+        }
     })
 }
