@@ -8,6 +8,6 @@ function App(){
     const [state, dispatch] = useReducer(postsReducer,initialState);
     const [filterText, setFilterText] = useState('');
     useEffect(() => {
-        
+        let isMounted = true;
     })
 }
