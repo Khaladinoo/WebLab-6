@@ -37,4 +37,8 @@ return () => {
                         <h1 style={{ borderBottom: '2px solid #007bff', paddingBottom: '10px' }}>
                 Post Dashboard
             </h1>
+            <FilterForm 
+                filterText={filterText} 
+                onFilterChange={setFilterText} 
+            />
 }
