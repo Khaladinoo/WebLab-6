@@ -41,4 +41,9 @@ return () => {
                 filterText={filterText} 
                 onFilterChange={setFilterText} 
             />
+            {state.loading && (
+                <div style={{ padding: '20px', textAlign: 'center', color: '#007bff', fontWeight: 'bold' }}>
+                    Loading posts, please wait...
+                </div>
+            )}
 }
