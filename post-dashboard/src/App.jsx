@@ -6,5 +6,6 @@ import FilterForm from "./components/FilterForm";
 
 function App(){
     const [state, dispatch] = useReducer(postsReducer,initialState);
+    const [filterText, setFilterText] = useState('');
     
 }
