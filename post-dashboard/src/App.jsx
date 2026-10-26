@@ -11,6 +11,9 @@ function App(){
         let isMounted = true;
         async function loadPosts() {
             dispatch({ type: 'FETCH_START' });
+            try {
+                const data = await fetchPosts();
+            }
         }
     })
 }
