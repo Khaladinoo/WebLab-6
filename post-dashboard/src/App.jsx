@@ -15,7 +15,9 @@ function App(){
                 const data = await fetchPosts();
                 if (isMounted) {
                     dispatch({ type: 'FETCH_SUCCESS', payload: data });
-            }
+            }catch (err) {
+                if (isMounted) {
+                    dispatch({ type: 'FETCH_ERROR', payload: err.message || 'Failed to fetch posts.' });
         }
     })
 }
