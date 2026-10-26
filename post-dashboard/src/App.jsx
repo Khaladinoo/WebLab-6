@@ -51,4 +51,9 @@ return () => {
                     <strong>Error:</strong> {state.error}
                 </div>
             )}
+            {!state.loading && !state.error && filteredPosts.length === 0 && (
+            <div style={{ padding: '20px', textAlign: 'center', color: '#6c757d', fontStyle: 'italic' }}>
+                    No posts found matching your criteria.
+                </div>
+            )}
 }
