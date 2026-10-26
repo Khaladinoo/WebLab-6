@@ -46,4 +46,9 @@ return () => {
                     Loading posts, please wait...
                 </div>
             )}
+            {state.error && (
+                <div style={{ padding: '16px', backgroundColor: '#f8d7da', color: '#721c24', borderRadius: '4px', marginBottom: '20px' }}>
+                    <strong>Error:</strong> {state.error}
+                </div>
+            )}
 }
