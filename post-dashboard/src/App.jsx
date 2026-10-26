@@ -15,9 +15,26 @@ function App(){
                 const data = await fetchPosts();
                 if (isMounted) {
                     dispatch({ type: 'FETCH_SUCCESS', payload: data });
-            }catch (err) {
+                }
+             }catch (err) {
                 if (isMounted) {
                     dispatch({ type: 'FETCH_ERROR', payload: err.message || 'Failed to fetch posts.' });
-        }
-    })
+                 }
+            }
+    }
+loadPosts();
+return () => {
+    isMounted = false;
+};
+   }, []);
+
+   const filteredPosts = state.posts.filter(post => 
+        post.title.toLowerCase().includes(filterText.toLowerCase())
+    );
+
+    return (
+        <div style={{ maxWidth: '700px', margin: '40px auto', fontFamily: 'Arial, sans-serif', padding: '0 20px' }}>
+                        <h1 style={{ borderBottom: '2px solid #007bff', paddingBottom: '10px' }}>
+                Post Dashboard
+            </h1>
 }
