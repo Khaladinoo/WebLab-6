@@ -1,17 +1,14 @@
-import React from "react";
+import React from 'react';
 import Post from './Post';
 
-function PostList({posts}) {
+function PostList({ posts }) {
     return (
         <div>
             {posts.map(post => (
-                <Post
-                    key={post.id}
-                    title={post.title}
-                    body={post.body}
-                    />
+                <Post key={post.id} post={post} />
             ))}
         </div>
-    )
+    );
 }
+
 export default PostList;
