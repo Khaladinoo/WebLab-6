@@ -13,6 +13,8 @@ function App(){
             dispatch({ type: 'FETCH_START' });
             try {
                 const data = await fetchPosts();
+                if (isMounted) {
+                    dispatch({ type: 'FETCH_SUCCESS', payload: data });
             }
         }
     })
